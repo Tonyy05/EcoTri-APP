@@ -1,0 +1,39 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@android:color/white">
+
+    <!-- Titre du quiz -->
+    <TextView
+        android:id="@+id/txtQuizTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Quiz"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/input_black" />
+
+    <!-- Ligne Score (mise en avant) -->
+    <TextView
+        android:id="@+id/txtScoreLine"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Score"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:textColor="@color/vert_principal"
+        android:layout_marginTop="6dp" />
+
+    <!-- Date (secondaire) -->
+    <TextView
+        android:id="@+id/txtDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:textSize="12sp"
+        android:textColor="@color/hint_gray"
+        android:layout_marginTop="4dp" />
+
+</LinearLayout>

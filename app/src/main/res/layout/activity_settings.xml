@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <!-- Titre Réglages -->
+  <TextView
+    android:id="@+id/tvTitleSettings"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Réglages"
+    android:textStyle="bold"
+    android:textSize="34sp"
+    android:textColor="@android:color/black"
+    android:padding="30dp"
+    app:layout_constraintTop_toTopOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <!-- Bouton Compte -->
+  <com.google.android.material.button.MaterialButton
+    android:id="@+id/btnCompte"
+    style="@style/Widget.MaterialComponents.Button"
+    android:layout_width="0dp"
+    android:layout_height="56dp"
+    android:layout_marginStart="32dp"
+    android:layout_marginEnd="32dp"
+    android:text="Compte"
+    android:textAllCaps="false"
+    android:textColor="@android:color/white"
+    app:cornerRadius="30dp"
+    app:backgroundTint="@color/vert_principal"
+    app:layout_constraintTop_toBottomOf="@id/tvTitleSettings"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <!-- Bouton Notifications -->
+  <com.google.android.material.button.MaterialButton
+    android:id="@+id/btnNotifications"
+    style="@style/Widget.MaterialComponents.Button"
+    android:layout_width="0dp"
+    android:layout_height="56dp"
+    android:layout_marginTop="24dp"
+    android:layout_marginStart="32dp"
+    android:layout_marginEnd="32dp"
+    android:text="Notifications"
+    android:textAllCaps="false"
+    android:textColor="@android:color/white"
+    app:cornerRadius="30dp"
+    app:backgroundTint="@color/vert_principal"
+    app:layout_constraintTop_toBottomOf="@id/btnCompte"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintEnd_toEndOf="parent" />
+
+
+    <!-- Trait de séparation au-dessus de la nav bar -->
+    <View
+        android:id="@+id/navDivider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:background="#FF000000"
+        app:layout_constraintBottom_toTopOf="@id/bottomNav"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Barre de navigation du bas -->
+    <LinearLayout
+        android:id="@+id/bottomNav"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingStart="24dp"
+        android:paddingEnd="24dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Jeu -->
+        <ImageButton
+            android:id="@+id/navJeu"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_nav_play"
+            android:contentDescription="Jeu"
+            android:background="@android:color/transparent"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:padding="8dp"
+            app:tint="#FF000000" />
+
+        <!-- Calendrier -->
+        <ImageButton
+            android:id="@+id/navCalendrier"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_nav_calendar"
+            android:contentDescription="Calendrier"
+            android:background="@android:color/transparent"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:padding="8dp"
+            app:tint="#FF000000" />
+
+        <!-- Déchèterie -->
+        <ImageButton
+            android:id="@+id/navDecheterie"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_nav_decheterie"
+            android:contentDescription="Déchèterie"
+            android:background="@android:color/transparent"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:padding="8dp"
+            app:tint="#FF000000" />
+
+        <!-- Profil / Réglages actif (vert) -->
+        <ImageButton
+            android:id="@+id/navProfil"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_nav_profile"
+            android:contentDescription="Réglages"
+            android:background="@android:color/transparent"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:padding="8dp"
+            app:tint="@color/vert_principal" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

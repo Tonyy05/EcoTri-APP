@@ -1,0 +1,16 @@
+<resources>
+    <style name="Theme.Triville" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- ton thème principal -->
+    </style>
+
+    <!-- Thème dédié au Splash -->
+    <style name="Theme.Triville.Splash" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="android:windowBackground">@color/splash_bg</item>
+        <item name="android:statusBarColor">@color/splash_bg</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:statusBarColor">@color/splash_bg</item>
+        <item name="android:navigationBarColor">@color/splash_bg</item>
+    </style>
+</resources>

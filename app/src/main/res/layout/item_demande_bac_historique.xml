@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp"
+    app:strokeWidth="1dp"
+    app:strokeColor="#1F000000">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Type de bac -->
+        <TextView
+            android:id="@+id/tvTypeBac"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Type :"
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Raison -->
+        <TextView
+            android:id="@+id/tvRaison"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Raison :"
+            android:textColor="#1E1E1E"
+            android:textSize="14sp" />
+
+        <!-- Adresse -->
+        <TextView
+            android:id="@+id/tvAdresse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Adresse :"
+            android:textColor="#1E1E1E"
+            android:textSize="14sp" />
+
+        <!-- Commentaire -->
+        <TextView
+            android:id="@+id/tvCommentaire"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:text="Commentaire :"
+            android:textColor="#1E1E1E"
+            android:textSize="14sp"
+            android:lineSpacingExtra="2dp" />
+
+        <!-- Statut -->
+        <TextView
+            android:id="@+id/tvStatut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Statut :"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

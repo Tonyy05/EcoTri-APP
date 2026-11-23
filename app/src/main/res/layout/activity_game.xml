@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@drawable/bg_game_gradient">
+
+
+    <!-- Déchet -->
+    <ImageView
+        android:id="@+id/imgWaste"
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/bg_round_light"
+        android:contentDescription="Déchet"
+        android:padding="18dp"
+        android:src="@drawable/ic_waste_placeholder"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtScore" />
+
+    <!-- Nom du déchet -->
+    <TextView
+        android:id="@+id/txtWasteName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Canette"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgWaste" />
+
+    <!-- Bouton quitter -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnBack"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:text="Quitter la partie"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@android:color/white"
+        app:backgroundTint="@color/vert_principal"
+        app:cornerRadius="28dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- 4 poubelles -->
+    <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridBins"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="16dp"
+        app:columnCount="2"
+        app:rowCount="2"
+        app:useDefaultMargins="true"
+        app:layout_constraintTop_toBottomOf="@id/txtWasteName"
+        app:layout_constraintBottom_toTopOf="@id/btnBack"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- JAUNE -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_bin_card"
+            android:padding="12dp"
+            app:layout_columnWeight="1">
+
+            <ImageView
+                android:id="@+id/binYellow"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:src="@drawable/ic_bin_yellow"
+                android:contentDescription="Poubelle jaune"
+                android:padding="14dp"
+                android:scaleType="centerInside"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/txtBinYellow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Poubelle jaune — Recyclables"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textColor="#111827" />
+        </LinearLayout>
+
+        <!-- VERTE -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_bin_card"
+            android:padding="12dp"
+            app:layout_columnWeight="1">
+
+            <ImageView
+                android:id="@+id/binGreen"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:src="@drawable/ic_bin_green"
+                android:contentDescription="Poubelle verte"
+                android:padding="14dp"
+                android:scaleType="centerInside"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/txtBinGreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Poubelle verte — Ordures ménagères"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textColor="#111827" />
+        </LinearLayout>
+
+        <!-- MARRON -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_bin_card"
+            android:padding="12dp"
+            app:layout_columnWeight="1">
+
+            <ImageView
+                android:id="@+id/binBrown"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:src="@drawable/ic_bin_brown"
+                android:contentDescription="Poubelle marron"
+                android:padding="14dp"
+                android:scaleType="centerInside"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/txtBinBrown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Poubelle marron — Déchets organiques"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textColor="#111827" />
+        </LinearLayout>
+
+        <!-- BLEUE -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@drawable/bg_bin_card"
+            android:padding="12dp"
+            app:layout_columnWeight="1">
+
+            <ImageView
+                android:id="@+id/binBlue"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:src="@drawable/ic_bin_blue"
+                android:contentDescription="Poubelle bleue"
+                android:padding="14dp"
+                android:scaleType="centerInside"
+                android:clickable="true"
+                android:focusable="true" />
+
+            <TextView
+                android:id="@+id/txtBinBlue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Poubelle bleue — Verre"
+                android:textStyle="bold"
+                android:textSize="12sp"
+                android:textColor="#111827" />
+        </LinearLayout>
+
+    </androidx.gridlayout.widget.GridLayout>
+
+    <LinearLayout
+        android:id="@+id/statsBar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="12dp"
+
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gridBins"
+        app:layout_constraintBottom_toTopOf="@id/btnBack">
+
+        <TextView
+            android:id="@+id/txtScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Score : 0"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black" />
+
+        <View
+            android:layout_width="16dp"
+            android:layout_height="1dp" />
+
+        <TextView
+            android:id="@+id/txtRound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Manche : 1 / 20"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

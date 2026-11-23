@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:padding="24dp"
+    tools:context=".MairieDashboardActivity">
+
+  <!-- Toolbar (navigation uniquement) -->
+  <com.google.android.material.appbar.MaterialToolbar
+      android:id="@+id/toolbarMairie"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:background="@android:color/white"
+      app:navigationIcon="@drawable/ic_arrow_back_24"
+      app:layout_constraintTop_toTopOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent" />
+
+  <!-- Titre écran -->
+  <TextView
+      android:id="@+id/txtTitleMairie"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="24dp"
+      android:text="Espace mairie"
+      android:textColor="@android:color/black"
+      android:textSize="28sp"
+      android:textStyle="bold"
+      android:textAlignment="center"
+      app:layout_constraintTop_toBottomOf="@id/toolbarMairie"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent" />
+
+  <!-- Gérer les demandes de bacs -->
+  <com.google.android.material.button.MaterialButton
+      android:id="@+id/btnGestionDemandes"
+      android:layout_width="0dp"
+      android:layout_height="56dp"
+      android:layout_marginTop="32dp"
+      android:text="Gérer les demandes de bacs"
+      android:textAllCaps="false"
+      android:textColor="@android:color/white"
+      app:backgroundTint="@color/vert_principal"
+      app:cornerRadius="20dp"
+      app:layout_constraintTop_toBottomOf="@id/txtTitleMairie"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent" />
+
+  <!-- Gérer le calendrier -->
+  <com.google.android.material.button.MaterialButton
+      android:id="@+id/btnGestionCalendrier"
+      android:layout_width="0dp"
+      android:layout_height="56dp"
+      android:layout_marginTop="16dp"
+      android:text="Gérer le calendrier"
+      android:textAllCaps="false"
+      android:textColor="@android:color/white"
+      app:backgroundTint="@color/vert_principal"
+      app:cornerRadius="20dp"
+      app:layout_constraintTop_toBottomOf="@id/btnGestionDemandes"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent" />
+
+  <!-- Gestion des avis -->
+  <com.google.android.material.button.MaterialButton
+      android:id="@+id/btnGestionAvis"
+      android:layout_width="0dp"
+      android:layout_height="56dp"
+      android:layout_marginTop="16dp"
+      android:text="Gestion des avis des déchèteries"
+      android:textAllCaps="false"
+      android:textColor="@android:color/white"
+      app:backgroundTint="@color/vert_principal"
+      app:cornerRadius="20dp"
+      app:layout_constraintTop_toBottomOf="@id/btnGestionCalendrier"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent" />
+
+  <!-- Gestion du compte -->
+  <com.google.android.material.button.MaterialButton
+      android:id="@+id/btnCompteMairie"
+      android:layout_width="0dp"
+      android:layout_height="56dp"
+      android:layout_marginTop="24dp"
+      android:text="Gestion du compte"
+      android:textAllCaps="false"
+      android:textColor="@android:color/white"
+      app:backgroundTint="@color/vert_principal"
+      app:cornerRadius="20dp"
+      app:layout_constraintTop_toBottomOf="@id/btnGestionAvis"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent" />
+
+  <!-- Déconnexion -->
+  <com.google.android.material.button.MaterialButton
+      android:id="@+id/btnDeconnexionMairie"
+      android:layout_width="0dp"
+      android:layout_height="56dp"
+      android:layout_marginTop="20dp"
+      android:text="Déconnexion"
+      android:textAllCaps="false"
+      android:textColor="@android:color/white"
+      app:backgroundTint="@color/rouge"
+      app:cornerRadius="20dp"
+      app:layout_constraintTop_toBottomOf="@id/btnCompteMairie"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
